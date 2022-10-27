@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    margin:0;
+    padding: 0;
+}
+a{
+    color: #fff;
+}
+nav{
+    background-color: #7f5ff7;
+    border: 2px solid black;
+    width: 100%;
+    height: 75px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+
+}
+.nav-container{
+    position: relative;
+    margin: 30px auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.nav-container .nav-links{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-content: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+
+}
+.nav-container h3{
+    font-weight: 600;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color:#fff;
+}
+
+.main{
+    margin: 200px auto;
+    position: relative;
+    width: 80%;
+    height: 100vh;
+}
+.counter-main{
+    margin: 40px  auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.counter-head{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: auto;
+}
+.priceContainer{
+    margin: auto;
+}
+#count{
+    margin: auto;
+    background-color: black;
+    color: white;
+    width:fit-content;
+    height:fit-content;
+    text-align: center;
+    font-size:4rem;
+
+}
+.btn-sec{
+    margin: auto;
+    font-size: 2rem;
+}
+.btn{
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: blue;
+    color: azure;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+    text-decoration:underline;
+}
+
+
+.hamburger{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    justify-content: center;
+    align-content: center;
+    display: none;
+    margin:auto 0;
+}
+.bar{
+    width: 30px;
+    height: 5px;
+    background-color:black;
+    justify-content: center;
+}
+#bar1{
+    margin :2px auto;
+}
+#bar2{
+    margin :2px auto;
+}
+#bar3{
+    margin :2px auto;
+}
+
+
+@media (max-width:899px) {
+    .main{
+        margin-top: 120px;
+    }
+    .counter-main{
+        margin: 80px  auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .btn-sec{
+        margin: auto;
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn{
+        font-size: 1.2rem;
+        font-weight: 500;
+        width: 120px;
+    }
+
+}
+
+@media(max-width:500px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(6px) rotate(30deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-9px) rotate(-30deg);
+    }
+    nav{
+        width: 100%;
+    }
+    .nav-container{
+        width: 100%;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    
+    .nav-links{
+        width: 200px;
+        font-size: 50px;
+        font-weight:50px;
+        display: flex;
+        flex-direction: column;
+        gap:0;
+        position:fixed;
+        top:75px;
+        right:100%;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .nav-links li a{
+        color: #fff;
+        font-weight: lighter;
+    }
+    .nav-links.active{
+        right:0;
+    }
+    .main{
+        margin: auto;
+        width: 100%;
+        height: 100vh;
+    }
+    .counter-main{
+        margin: 20px  auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    .btn-sec{
+        margin: auto;
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn{
+        font-size: 1.2rem;
+        font-weight: 400;
+        width: 100px;
+    }
+
+
+}
