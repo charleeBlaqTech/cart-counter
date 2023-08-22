@@ -5,37 +5,35 @@ const price=document.querySelector("#price");
 let increase=document.getElementById("increament");
 let reset=document.getElementById("reset");
 let decrease=document.getElementById("decreament");
-let defaultPrice=count.innerHTML=0
+let defaultPrice=0
+count.innerText=defaultPrice
 const uni=5
 
 
 
 //======================APPLICATION DOM MANIPULATION====================================================================
 increase.addEventListener('click', function(){
-    const incre=++count.innerHTML
+    const incre=++count.innerText
     price.textContent=`${incre * uni}`
     count.style.color="green";
     count.style.background="white";
-    increase.style.background="green"
 })
 reset.addEventListener('click', function(){
-    count.innerHTML=defaultPrice
+    count.innerText=defaultPrice
     price.textContent=0
     count.style.color="white";
-    count.style.background="black";
-    increase.style.background="blue"
-    decrease.style.background="blue" 
+    count.style.background="grey";
+
 })
 decrease.addEventListener('click', function(){
-    if(count.innerHTML <= 0){
+    if(count.innerText <= 0){
         count.style.color="white";
         count.style.background="black";
     }else{
-        const decre=--count.innerHTML
+        const decre=--count.innerText
         price.textContent=`${decre * uni}`
         count.style.color="red";
         count.style.background="white";
-        decrease.style.background="red";
     }
    
 })
